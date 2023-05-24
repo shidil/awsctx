@@ -4,6 +4,9 @@ Simple shell script to switch between different AWS_PROFILE variables from your 
 
 ## Installation
 
+Install fzf https://github.com/junegunn/fzf#installation
+
+
 ```sh
 git clone https://github.dev/shidil/awsctx.git
 cd awsctx
