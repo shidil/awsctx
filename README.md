@@ -39,3 +39,43 @@ awsctx
 awsctx prod-env
 ```
 
+## Preview
+
+https://github.com/shidil/awsctx/assets/4880359/46dc18de-386b-4910-ac4e-911785cecaf7
+
+Given `~/.aws/config` file like the example below
+
+```
+[profile prod-admin]
+sso_session = orgname
+sso_account_id = 1111111111
+sso_role_name = AdministratorAccess
+region = ap-southeast-2
+output = json
+
+[profile prod]
+sso_session = orgname
+sso_account_id = 1111111112
+sso_role_name = ViewOnlyAccess
+region = ap-southeast-2
+output = json
+
+[profile dev-admin]
+sso_session = orgname
+sso_account_id = 1111111113
+sso_role_name = AdministratorAccess
+region = ap-southeast-2
+output = json
+
+[profile another]
+sso_session = orgname
+sso_account_id = 22222222222
+sso_role_name = ViewOnlyAccess
+region = ap-south-1
+output = json
+
+[sso-session orgname]
+sso_start_url = https://orgname.awsapps.com/start#
+sso_region = ap-south-1
+sso_registration_scopes = sso:account:access
+```
